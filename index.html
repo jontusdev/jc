@@ -1,12 +1,13 @@
+<!DOCTYPE html>
 <html>
-<head> 
-  <title>WashmasterX</title>  
-<style>  
+<head>
+<style>
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  background-color: #333;
 }
 
 li {
@@ -15,15 +16,25 @@ li {
 
 li a {
   display: block;
-  padding: 8px;
-  background-color: #dddddd;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
 </style>
 </head>
-<body>  
+<body>
+
 <ul>
-  <li><a style="font-family:'Arial Black', Gadget, sans-serif" href="index.html">Home</a></li>
-  <li><a style="font-family:'Arial Black', Gadget, sans-serif" href="services.html">Services</a></li>
-  <li><a style="font-family:'Arial Black', Gadget, sans-serif" href="contact.html">Contact</a></li>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="#news">Services</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">History</a></li>
 </ul>
+
 </body>
 </html>

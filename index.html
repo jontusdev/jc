@@ -12,7 +12,6 @@ ul {
 
 li {
   float: left;
-  padding: 0;
 }
 
 li a {
@@ -24,8 +23,12 @@ li a {
   font-family:"Arial Black", Gadget, sans-serif;
 }
 
-li a:hover {
+li a:hover:not(.active) {
   background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
 }
 </style>
 </head>

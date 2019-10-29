@@ -1,57 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
+<title>WashmasterX</title>
+<script>
+  function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>  
 <style>
-body {
-  font-size: 28px;
-  font-family:"Arial Black", Gadget, sans-serif;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  /* Style the tab */
+.tab {
   overflow: hidden;
-  background-color: #333;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
 }
 
-li {
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
   float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
   padding: 14px 16px;
-  text-decoration: none;
+  transition: 0.3s;
 }
 
-li a:hover {
-  background-color: #111;
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
 }
 
-.active {
-  background-color: #006699;
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
 }
-</style>
-</head>
-<body>
 
-<div class="header">
-  <h2>WashmasterX</h2>
-  <p>We wash clothes</p>
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+</style>  
+<h3>WashmasterX</h3>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, '1')">Home</button>
+  <button class="tablinks" onclick="openCity(event, '2')">Services</button>
+  <button class="tablinks" onclick="openCity(event, '3')">Get My Clothes Clean!</button>
 </div>
 
-<ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">Services</a></li>
-  <li><a href="#contact">Contact</a></li>
-</ul>
-
+<!-- Tab content -->
+<div id="1" class="tabcontent">
+  
 <h3>WashmasterX</h3>
 <p>We wash your clothes to the <strong>highest</strong> standard.</p>
 <p>Washmaster Are the best.</p>
@@ -63,8 +80,21 @@ li a:hover {
 <p>Our Washers have university degree's in washing clothes, so you can be aussred you have the best washers.</p>
 <p>We have a large family history in washing clothes, our family has been doing for over 100 years!</p>
 <p>You should use WashmasterX for your washing service</p>
-  
 
-</body>
-</html>
+</div>
+
+<div id="2" class="tabcontent">
+  <h3 style="font-family:'lucida console', monospace;">Services</h3>
+  <h1>The Basic</h1>
+  <p>A basic everyday wash</p>
+  <h1>The Premium</h1>
+  <p>For extra dirty clothes</p>
+  <h1>The Speedy</h1>
+  <p>For quick service<p>
+</div>
+
+<div id="3" class="tabcontent">
+  <h3 style="font-family:'lucida console', monospace;">html_doctype:printmsg:Error 404, Page not found</h3>
+  <p style="font-family:'lucida console', monospace;">html_errtype:404</p>
+</div>
 
